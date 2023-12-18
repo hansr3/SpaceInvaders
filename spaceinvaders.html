@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+        </style>
+        <script src="./dist/spaceinvaders.js"></script>
+        <script src="./preventDefault.js"></script>
+    </head>
+    <body>
+        
+        <h1>Space Invaders</h1>
+        <svg id="canvas" width="600" height="600" style="background-color: rgb(0, 0, 0)"\>
+            <g id="ship" transform="translate(300,500)">
+                <polygon points="-15,20 15,20 0,-20"
+                style="fill:rgb(0, 253, 0)">
+                </polygon>
+                
+            </g>
+        </svg>
+        <div id="controls"></div>
+        <!--Show controlls and highlight derived from asteroids example-->
+        <h2>Controls:</h2>
+        <table>
+        <tr><td>Move Left</td><td><div id="ArrowLeft" class="key">&#8678;</div></td></tr>
+        <tr><td>Move Right</td><td><div id="ArrowRight" class="key">&#8680;</div></td></tr>
+        <tr><td>Fire</td><td><div id="Key S" class="key" 
+        style="width:50px">Space</div></td></tr>
+        </table>
+        </div>
+        <h2>How To Play:</h2>
+        <h4>Destroy all the aliens to win the game<br>
+            Move the ship right and left as shown by the controls above to avoid the alien bullets<br>
+            Your ship will be destroyed if you got hit by one of the alien bullets<br>
+            You can destroy the aliens by shooting them and gain points<br>
+            Your score is indicated at the upper left screen of the game<br>
+            To shoot you can use the Space key as shown by the controlls<br>
+            When combining the arrow and Space key, your bullets will travel diagonally, right or left depending on which arrow are you pressing<br>
+            Each alien has different scores and they shoot at different rates randomly<br>
+            <p>Octopus aliens (purple circle) are wortth 10 points each<br>
+            Crab aliens (red circle) are wortth 20 points each<br>
+            Squid aliens (white circle) are wortth 30 points each<br>
+            <p>If any alien reached passed the tip of your ship (i.e. bottom)<br>
+            the game will end and you loose
+        </h4>
+        
+    </body>
+</html>
